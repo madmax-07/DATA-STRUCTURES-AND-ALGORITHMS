@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+string count_string(string str)
+{
+    int i = 0, j = i + 1, n, count;
+    
+    n = str.length();
+
+    string s;
+    while (i < n)
+    {
+        count = 1;
+        while (j < n && str[i] == str[j])
+        {
+            j++;
+            count++;
+        }
+        s += to_string(count);
+        s += str[i];
+        i = j;
+        j = i + 1;
+    }
+    
+   
+    return s;
+}
+
+string countAndSay(int n)
+{
+    if (n == 1)
+        return "1"; //base case
+    string str = countAndSay(n - 1);
+    return count_string(str);
+}
+int main()
+{
+    for(int n=1;n<=6;n++)
+    cout << countAndSay(n)<<endl;
+}
