@@ -129,8 +129,8 @@ node *mergesort(node *head)
     mid->link = NULL;
 
     //STEP 2: RECCURSIVLEY SORT TWO PARTS
-    a = mergesort(a);
-    b = mergesort(b);
+    a = mergesort(a); //a points to the starting of sorted left half
+    b = mergesort(b); //b points to starting of sorted right left
 
     // STEP 3 :MERGE THEM
     node *c = merge_sorted_linkedlist(a, b);
