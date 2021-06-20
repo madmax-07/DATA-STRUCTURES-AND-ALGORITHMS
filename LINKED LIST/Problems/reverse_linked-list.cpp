@@ -74,7 +74,7 @@ ostream &operator<<(ostream &os, node *head) /*we return the cout obeh=jcet to b
     return os;
 }
 //---------------END OF OPERATOR OVERLOADING FUNCTIONS-------------------------------------------------------------
-//iterative function to reverse a linked list 
+//iterative function to reverse a linked list
 void reverse(node *&head)
 {
     node *prev = NULL, *current = head, *next;
@@ -87,20 +87,24 @@ void reverse(node *&head)
     }
     head = prev;
 }
-//reccursive function to reverse a linked list 
+//reccursive function to reverse a linked list
 node *reverse_recursive(node *head)
 {
     if (head == NULL || head->link == NULL) //base case if the list is emplty or we have reached the last nod eof the list
         return head;
     node *shead = reverse_recursive(head->link);
+    /*
     node *temp = shead;
     while (temp->link != NULL)
         temp = temp->link;
     temp->link = head;
+    head->link = NULL */
+
+    //-- the following is the optimisation for the above since temp is the link of head
+    head->link->link = head;
     head->link = NULL;
     return shead;
 }
-
 int main()
 {
     node *head = NULL;
