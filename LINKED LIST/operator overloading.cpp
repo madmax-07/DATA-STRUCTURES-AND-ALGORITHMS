@@ -142,18 +142,21 @@ void take_input(node*&head)
     
 }
 //------------OPERATOR-OVERLOADING---------------------------------------------------------------------------------
+/* To overload the cout<<head -We will have to pass both the cout object which is a part of ostream class and head object which is of the type Node * 
+similarly with cin>>head
+*/
 
 // CIN >> OPERATOR OVERLOADED 
 istream &operator>>(istream &is, node*&head) /* take a node that we return the cin object else it returns void and we wont 
                                              able to take cin>>head2>>head2. THIS IS Known as Cascading of operators*/
-{
+{ // (is) is cin basically just given another name
     take_input(head);
     return is;
 }
 
 //COUT <<OPERATOR OVERLOADED 
-ostream &operator<<(ostream &os, node *head) /*we return the cout obeh=jcet to be able to use cout<<head1<<head 2 */
-{
+ostream &operator<<(ostream &os, node *head) /*we return the cout object to be able to use cout<<head1<<head 2 */
+{ //NOTE os is cout only just given another name to it 
     print(head);
     return os;
 }
