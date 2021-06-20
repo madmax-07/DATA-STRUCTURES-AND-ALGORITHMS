@@ -86,6 +86,40 @@ void insertInMiddle(node *&head, int d, int p) //insert at pos
         current->link = n;
     }
 }
+// There are two ways - 
+// either take head as input (by reference) and then insert 
+// or insert values then return a head
+
+void takeInput(node* &head) {
+	int d;
+	cin>>d;
+
+	while(d!=-1) {
+		insertAtHead(head, d);
+		cin>>d;
+	}
+}
+
+node* takeInput2() {
+	node *head = NULL;
+
+	int d;
+	cin>>d;
+
+	while(d!=-1) {
+		insertAtHead(head, d);
+		cin>>d;
+	}
+
+	return head;
+}
+// NOTE -
+// if you want to read from file
+// Just do 
+// while(cin>>d) {
+//	insertAtHead(head, d);
+// }
+
 int main()
 {
     node *head = NULL;
