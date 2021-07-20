@@ -20,8 +20,25 @@ int main()
 }
 ```
 ```
-Compiler Error: 'void*' is not a pointer-to-object type
+O/P : Compiler Error: 'void*' is not a pointer-to-object type
 ```
-
-
+for more refer below:
 https://www.hackerearth.com/practice/notes/void-pointer-in-c/
+
+### What is an array of pointers ?
+An array that contains pointers as its elements.Every element of the array is a pointer variable that holds address of any variable of the appropriate type.
+
+```
+datatype *arr[size]
+```
+```C++
+int main(){
+int a=5,b=6,c=7;
+int *arr[3];
+arr[0]=&a;
+arr[1]=&b;
+arr[2]=&c;
+for(int i=0;i<3;i++){
+cout<<arr[i]<<" ";
+cout<<endl;
+}
