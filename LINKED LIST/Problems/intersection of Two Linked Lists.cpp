@@ -47,3 +47,4 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB)
     return p1;
 }
 };
+//TIME complexity -O(M)+O(N)+O(M-N)+O(N)=O(M)
