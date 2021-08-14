@@ -1,7 +1,23 @@
   ## VECTORS
-  vectors are resizeable dynamic arrays, and are extremely useful in many implementations
   
-  1. INITIALISATION
+  ### Important concepts of vectors
+- Vectors are **sequential containers** which behave like dynamic arrays,i.e, they store elements in contigous memory locations and can modify their size according to need.
+- Supports **random access**. Operation on last element takes O(1) time whereas on other positions it takes O(N) time because insertion is done from end in vectors.
+- Traversal is done using iterators. Iterators are objects that point to elements present inside containers.
+
+### Disadvantages of Arrays:
+  1. Cannot modify the size of the array once initialized.
+  2. Cannot delete elements from array.
+  3. Array cannot store elements of different data types.
+ 
+### What does it mean for a vector to be synchronized?
+It means that multiple threads can modify the Vector in parallel without risk of data corruption.
+
+### Why Vector are synchronized?
+Vector is considered 'thread-safe' because access the the internals of the Vector is synchronized. When one thread is executing a synchronized method for an object, all other threads that invoke synchronized methods for the same object block (suspend execution) until the first thread is done with the object.
+
+  
+1. INITIALISATION
   - **Declaring an empty vector and then pushing values**
 ```cpp
 // creates an empty vector 
