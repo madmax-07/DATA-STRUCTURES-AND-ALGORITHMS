@@ -31,3 +31,5 @@ class Solution
         //Your code here
     }
 };
+//tc:o(logn) in best case and o(n) in worst case
+// sc:O(logn) in bestcase and o(n) in worst case 
