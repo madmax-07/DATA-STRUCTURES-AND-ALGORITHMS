@@ -25,11 +25,12 @@ public:
     vector<vector<int>> subsets(vector<int>& nums) {
         vector<vector<int>>ans;
         vector<int>v;
-        int n=pow(2,nums.size());
-        for(int i=0;i<n;i++){
+        int n=pow(2,nums.size()); //there will be 2^n elemnts in the power set
+        for(int i=0;i<n;i++){ //we will iterate from 1 to 2^n elements 
             vector<int>v;
             int temp=i;
-            for(int j=nums.size()-1;j>=0;j--){
+            for(int j=nums.size()-1;j>=0;j--){ /*for each i[ ranging from 0 to 2^n-1] we will get the binary bits */
+                                              
                 int r=temp%2;
                 temp=temp/2;
                 if(r!=0)
