@@ -32,7 +32,7 @@ Constraints:
 1 <= typed.length <= 1000
 name and typed contain only lowercase English letters.
 */
-
+//CONCEPT :: STRING MANIPULATION 
 class Solution {
 public:
     bool isLongPressedName(string name, string typed) {
