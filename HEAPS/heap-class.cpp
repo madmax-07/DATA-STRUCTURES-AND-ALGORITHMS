@@ -11,6 +11,9 @@ class heap
         else
             return a > b;
     }
+    /* Max-heapify is a process of arranging the nodes in correct order so that they follow max-heap property.
+       Min-heapify is a process of arranging the nodes in correct order so that they follow min-heap property.
+    */
     void heapify(int id)
     {
         int left = 2 * id;
@@ -25,8 +28,12 @@ class heap
         {
             min_index = right;
         }
+        if(min_index!=id)
+        {
+                  swap(v[min_index],v[id]);
+                  heapify(min_index);
+        }
     }
-
 public:
     heap(int ds = 10, bool type = true)
     {
