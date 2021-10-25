@@ -69,3 +69,35 @@ public:
         
     }
 };
+//iterative sol
+class Solution {
+public:
+    int helper(vector<int>&a,int l,int h){
+        
+        while(l<=h)
+        { if(l==h)
+        return a[l];
+        int m=(l+h)/2;
+        if(l<m and a[m-1]>a[m])
+            return a[m];
+        if(h>m and a[m+1]<a[m])
+            return a[m+1];
+         if(a[h]>a[m])
+           h=m-1;
+        else 
+            l=m+1;
+        }
+    
+            return a[0];
+                
+        
+        
+    }
+    int findMin(vector<int>& nums) {
+        int l=0,h=nums.size()-1;
+        return helper(nums,l,h);
+        
+    }
+};
+//Time Compleity
+O(log n)
