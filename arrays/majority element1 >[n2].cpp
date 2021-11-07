@@ -33,6 +33,7 @@ public:
          if(count==0)
          {el=nums[i];
         }
+      //
          if(el==nums[i])
              count++;
      
