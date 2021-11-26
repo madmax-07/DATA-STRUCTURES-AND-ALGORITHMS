@@ -31,6 +31,32 @@ A straightforward solution using O(mn) space is probably a bad idea.
 A simple improvement uses O(m + n) space, but still not the best solution.
 Could you devise a constant space solution?
 */
+//solution 1 : tc O(nxm) and sc=O(m+n)
+class Solution {
+public:
+    void setZeroes(vector<vector<int>>& matrix) {
+        vector<int>row(matrix.size(),-1); //row
+        vector<int>col(matrix[0].size(),-1); //col
+        for(int i=0;i<matrix.size();i++){
+            for(int j=0;j<matrix[0].size();j++){
+                if(matrix[i][j]==0){
+                    row[i]=0;
+                    col[j]=0;
+                }
+            }
+        }
+        for(int i=0;i<matrix.size();i++){
+            for(int j=0;j<matrix[i].size();j++){
+                if(row[i]==0||col[j]==0)
+                    matrix[i][j]=0;
+            }
+        }
+                    
+            }
+        
+
+};
+//solution 2
 class Solution {
 public:
     void setZeroes(vector<vector<int>>& matrix) {
