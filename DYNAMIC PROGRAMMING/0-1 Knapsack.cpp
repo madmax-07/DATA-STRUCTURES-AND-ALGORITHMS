@@ -32,5 +32,5 @@ int Solution::solve(vector<int> &val, vector<int> &wght, int cap) {
             dp[i][j] = -1;
     return help(val,wght,cap,n,dp);
 }
-//Time Complexity=O(n*n)
-
+//Time Complexity=O(n*w)
+//space complexity =O(n*w)->space occupied by the auxilary array 
