@@ -32,5 +32,26 @@ return p;
 //Time Complexity:O(n) where n is the number of nodes in the binary tree
 //Auxilary Space :O(n) //n is the number of elements 
 
-
+//method 2 :using a stack 
+vector<int> reverseLevelOrder(Node *root)
+{ queue<Node*>q;
+  stack<int>s;
+  vector<int>ans;
+  q.push(root);
+  while(!q.empty()){
+      Node*temp=q.front();
+      s.push(temp->data);
+      q.pop();
+      if(temp->right)
+      q.push(temp->right);
+      if(temp->left)
+      q.push(temp->left);
+  }
+  while(!s.empty())
+ { ans.push_back(s.top());
+  s.pop();
+}
+return ans;
+    // ce here
+}
 
