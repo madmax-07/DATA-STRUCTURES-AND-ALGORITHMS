@@ -25,7 +25,7 @@ Public:
 ## TRAVERSAL
   
 * Two Main Trversals are possible in graphs 
- * BFS - Breadth First Traversal 
+  #### BFS - Breadth First Traversal 
     * This approach involves visiting all the neighbours of a particular node(Lets say src) and the  visisting further node until all nodes are visistied
 ```C++
   // map<int,vector>graph;
@@ -49,10 +49,10 @@ bfs(int src)
     }
   }
  ```
-  * Time Complexity Analysis of BFS O(V+E) V= no of vertices; E=no of edges
+    * Time Complexity Analysis of BFS O(V+E) V= no of vertices; E=no of edges
       V X (O(1) + E + O(1))= V + V*E + V= 2V + E =O(V+E)
  
- * DFS - Depth First Traversal 
+ #### DFS - Depth First Traversal 
   * The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each 
  branch before backtracking.
 ``` C++
@@ -76,4 +76,4 @@ dfs(int src)
   dfs_helper(src, visted);
 }
 ```
-* Time Complexity Analysis =O(N)
+    * Time Complexity Analysis =O(N)
