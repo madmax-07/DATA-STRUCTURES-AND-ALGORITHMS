@@ -6,4 +6,6 @@ The task for you is to create a number which:
 ##### A simple Brute Force approach will involve creating all the combinations of the given sequence of number (You can use recurssion for that) and choose the nnumber which is minimum of all the number greater than N 
 Time Complexity of the above approach will be <mark>O(n!)</mark>
 
+##### Now the concept here is that if you want to form a number which is just greater than the given number we will seek to make change stating from the unit's/one's to make the smallest possible effect of change
+
  
