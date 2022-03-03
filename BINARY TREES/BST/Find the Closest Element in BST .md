@@ -21,7 +21,7 @@
         }
     };
 
-************************************************************/
+
 ```C++
 TreeNode<int>*root2;
 void helper(TreeNode<int>*root,TreeNode<int>*&prev){
