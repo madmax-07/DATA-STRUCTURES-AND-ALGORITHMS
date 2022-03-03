@@ -1,7 +1,4 @@
-
-/************************************************************
-
-    Following is the Binary Tree node structure
+   Following is the Binary Tree node structure
     
     template <typename T>
     class TreeNode {
