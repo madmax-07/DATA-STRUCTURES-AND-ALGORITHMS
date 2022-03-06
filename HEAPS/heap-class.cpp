@@ -4,12 +4,12 @@ class heap
 {
     vector<int> v;
     bool minheap;
-    bool compare(int a, int b)
+    bool compare(int child, int parent)
     {
         if (minheap)
-            return a < b;
+            return child < parent;
         else
-            return a > b;
+            return child > parent;
     }
     /* Max-heapify is a process of arranging the nodes in correct order so that they follow max-heap property.
        Min-heapify is a process of arranging the nodes in correct order so that they follow min-heap property.
