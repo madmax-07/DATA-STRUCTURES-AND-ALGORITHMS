@@ -16,6 +16,54 @@ int main()
     f();
 }
 ```
-## Priority Queue For Custom Class
- N people are standing in a queue find the name of the 3 tallest people.
+## Priority Queue For Custom Class - Setting our own priority criteria in the Priority Queue 
+ N people are standing in a queue find the name of the 3  oldest people.
 ```
+#include <bits/stdc++.h>
+using namespace std;
+class person
+{
+public:
+    string name;
+    int age;
+    person(string n, int a)
+    {
+        name = n;
+        age = a;
+    }
+};
+class compare
+{
+public:
+    bool operator()(person a, person b)
+    {
+        return a.age < b.age;
+    }
+};
+int main()
+{
+    int n, k;
+    cin >> n >> k;
+    priority_queue<person, vector<person>, compare> pq;
+    for (int i = 0; i < n; i++)
+    {
+        string name;
+        int age;
+        cin >> name >> age;
+        person p(name, age);
+        pq.push(p);
+    }
+
+    vector<string> ans;
+    while (k--)
+    {
+        ans.push_back(pq.top().name);
+        pq.pop();
+    }
+    for (auto x : ans)
+        cout << x << endl;
+}
+```
+#### You would say that in priority_queue compare function why a.age <b.age ?
+Compare - A Compare type providing a strict weak ordering.
+Note that the Compare parameter is defined such that it returns true if its first argument comes before its second argument in a weak ordering. But because the priority queue outputs largest elements first, the elements that "come before" are actually output last. That is, the front of the queue contains the "last" element according to the weak ordering imposed by Compare.
