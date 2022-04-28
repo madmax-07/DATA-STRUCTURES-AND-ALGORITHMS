@@ -1,4 +1,5 @@
-###Functional objects/ Functors : C++ allows function call operator() to be overloaded,such that an object intitated from a class can be called like a function
+## Functional objects/ Functors : 
+ * C++ allows function call operator() to be overloaded,such that an object intitated from a class can be called like a function
 
 ``` C++
 class Fun
