@@ -18,7 +18,7 @@ int main()
 ```
 ## Priority Queue For Custom Class - Setting our own priority criteria in the Priority Queue 
  N people are standing in a queue find the name of the 3  oldest people.
-```
+``` C++
 #include <bits/stdc++.h>
 using namespace std;
 class person
